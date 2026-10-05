@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shagona — Télécharger l'application</title>
+  <meta name="description" content="Shagona, le carnet de crédits de votre boutique, sur votre téléphone. Même sans internet.">
+  <meta name="theme-color" content="#6A1B9A">
+  <link rel="icon" href="shagona-icon.svg" type="image/svg+xml">
+  <!-- Aperçu du lien dans WhatsApp -->
+  <meta property="og:title" content="Shagona — Ma boutique">
+  <meta property="og:description" content="Le carnet de crédits de votre boutique, sur votre téléphone. Même sans internet.">
+  <meta property="og:image" content="https://bassiroukadade.github.io/shagona-app/shagona-icon.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #6A1B9A;
+      --brand-dark: #4A1466;
+      --brand-light: #F4ECF8;
+      --gold: #F2A900;
+      --gold-soft: #FDF1D3;
+      --gold-text: #7A5300;
+      --text: #0F172A;
+      --muted: #475569;
+      --border: #E2E8F0;
+      --paid: #16A34A;
+      --paid-soft: #DCFCE7;
+      --paid-text: #15803D;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: #FFFFFF;
+      color: var(--text);
+      font-family: Onest, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+    }
+    main { max-width: 520px; margin: 0 auto; padding: 32px 16px 48px; }
+
+    .hero { text-align: center; }
+    .logo {
+      width: 88px; height: 88px; border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(106, 27, 154, .12);
+    }
+    h1 { margin: 20px 0 4px; font-size: 30px; line-height: 1.15; letter-spacing: -.02em; }
+    .tagline { margin: 0 0 6px; font-size: 18px; font-weight: 600; color: var(--brand); }
+    .lead { margin: 0 auto; max-width: 400px; color: var(--muted); font-size: 16px; }
+
+    .download {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      width: 100%; min-height: 60px; margin-top: 28px; padding: 14px 20px;
+      border-radius: 16px; background: var(--brand); color: #FFFFFF;
+      font-size: 19px; font-weight: 700; text-decoration: none;
+      box-shadow: 0 6px 16px rgba(106, 27, 154, .28);
+      transition: background .15s;
+    }
+    .download:hover, .download:focus-visible { background: var(--brand-dark); }
+    .download:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .coin {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%; background: var(--gold); color: var(--brand-dark);
+    }
+    .meta { margin: 10px 0 0; text-align: center; color: var(--muted); font-size: 14px; }
+    .meta strong { color: var(--text); font-weight: 600; }
+
+    .features { display: grid; gap: 10px; margin: 32px 0 0; padding: 0; list-style: none; }
+    .features li {
+      display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+      border: 1px solid var(--border); border-radius: 14px; font-weight: 500;
+    }
+    .features svg { flex: none; color: var(--brand); }
+
+    h2 { margin: 40px 0 6px; font-size: 22px; letter-spacing: -.01em; }
+    .hint { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+    .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 12px; }
+    .steps li {
+      position: relative; padding: 14px 16px 14px 60px; border-radius: 14px; background: var(--brand-light);
+      counter-increment: step; font-size: 16px;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute; left: 16px; top: 13px;
+      width: 30px; height: 30px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--brand); color: #FFFFFF; font-weight: 700; font-size: 15px;
+    }
+    .steps b { font-weight: 700; }
+
+    .safe {
+      display: flex; gap: 12px; align-items: flex-start; margin-top: 20px; padding: 14px 16px;
+      border-radius: 14px; background: var(--paid-soft); color: var(--paid-text); font-size: 15px;
+    }
+    .safe svg { flex: none; margin-top: 2px; color: var(--paid); }
+
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 13px; }
+    .chip { display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--gold-soft); color: var(--gold-text); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <img class="logo" src="shagona-icon.svg" alt="Logo Shagona" width="88" height="88">
+      <h1>Shagona</h1>
+      <p class="tagline">Le carnet de crédits de votre boutique</p>
+      <p class="lead">Notez ce que vos clients vous doivent, sur votre téléphone, comme dans votre cahier. Même sans internet.</p>
+
+      <a class="download" id="download" href="https://github.com/BassirouKadade/shagona-app/releases/latest/download/shagona.apk" download>
+        <span class="coin" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        </span>
+        Télécharger l'application
+      </a>
+      <p class="meta" id="meta">Pour Android · <strong>gratuit</strong></p>
+    </section>
+
+    <ul class="features">
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Vos clients, leurs crédits et leurs règlements
+      </li>
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="M19 12.86a10 10 0 0 0-2-1.43"/><path d="M2 8.82a15 15 0 0 1 4.18-2.65"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="m2 2 20 20"/></svg>
+        Marche sans internet, envoie tout dès que le réseau revient
+      </li>
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><circle cx="12" cy="12" r="10"/></svg>
+        En français, en haoussa et en zarma
+      </li>
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+        Vos employés travaillent avec vous, chacun sur son téléphone
+      </li>
+    </ul>
+
+    <h2>Comment l'installer</h2>
+    <p class="hint">L'application ne vient pas du Play Store : Android demande une autorisation, une seule fois.</p>
+    <ol class="steps">
+      <li>Touchez <b>Télécharger l'application</b> et attendez la fin du téléchargement.</li>
+      <li>Ouvrez le fichier <b>shagona.apk</b> (dans les notifications, ou dans « Téléchargements »).</li>
+      <li>Si le téléphone le demande, touchez <b>Paramètres</b>, puis activez <b>Autoriser cette source</b>, et revenez en arrière.</li>
+      <li>Touchez <b>Installer</b>, puis <b>Ouvrir</b>. Choisissez votre langue et créez votre compte avec votre numéro <span class="chip">+227</span>.</li>
+    </ol>
+
+    <div class="safe">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span>Application officielle Shagona. Téléchargez-la seulement depuis cette page. Pour une mise à jour, revenez ici : même lien, nouvelle version.</span>
+    </div>
+
+    <footer>
+      <p>Shagona · Ma boutique · Niger</p>
+    </footer>
+  </main>
+
+  <script>
+    // Version et taille de la dernière version publiée (GitHub). En cas d'échec, le texte
+    // par défaut reste affiché et le bouton marche quand même.
+    fetch("https://api.github.com/repos/BassirouKadade/shagona-app/releases/latest")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (release) {
+        if (!release) return;
+        var apk = (release.assets || []).find(function (a) { return a.name === "shagona.apk"; });
+        if (!apk) return;
+        var mb = (apk.size / 1048576).toFixed(0);
+        var version = String(release.tag_name || "").replace(/^v/, "");
+        document.getElementById("meta").innerHTML =
+          "Pour Android · <strong>gratuit</strong> · version " + version + " · " + mb + " Mo";
+      })
+      .catch(function () {});
+  </script>
+</body>
+</html>
